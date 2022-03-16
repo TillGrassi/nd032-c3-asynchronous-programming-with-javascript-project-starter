@@ -289,9 +289,9 @@ function resultsView(positions) {
 }
 
 function raceProgress(positions) {
-	let userPlayer = positions.find(e => e.id === parseInt(store.player_id));
-	customRacerName[userPlayer.driver_name] += " (you)"
-
+	const userPlayer = positions.find(e => e.id === parseInt(store.player_id));
+//I did not got the (you) indicator working with the custom names
+//It kept repeatingly adding (you)'s and i couldnt find a way to fix it
 	positions = positions.sort((a, b) => (a.segment > b.segment) ? -1 : 1)
 	let count = 1
 
